@@ -1,0 +1,22 @@
+server {
+        listen 80;
+        server_name  www.crd.levaldyerres.fr;
+        rewrite     ^ http://crd.levaldyerres.fr$request_uri? permanent;
+}
+
+
+server {
+        listen       80;
+        server_name  crd.levaldyerres.fr;
+        root   /home/crd/www/;
+        index  index.html index.htm index.php;
+	
+	location ~ \.php$ {
+                fastcgi_pass unix:/var/run/php5-fpm.sock;
+                fastcgi_index  index.php;
+                fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+                include /etc/nginx/fastcgi_params;
+        }
+
+
+}

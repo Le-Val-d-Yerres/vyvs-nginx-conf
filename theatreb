@@ -1,0 +1,15 @@
+server {
+        listen 80;
+        server_name  www.theatrebrunoy.levaldyerres.fr;
+        rewrite     ^ http://theatrebrunoy.levaldyerres.fr$request_uri? permanent;
+}
+
+
+server {
+        listen       80;
+        server_name  theatrebrunoy.levaldyerres.fr;
+        root   /home/theatreb/www/;
+        index  index.html index.htm ;
+
+
+}
