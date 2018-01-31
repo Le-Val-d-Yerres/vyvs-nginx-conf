@@ -21,11 +21,11 @@ server
 
         location /media
         {
-                root /home/web/www/valdyerresweb-preprod/valdyerresweb/;
+                root /home/web/www/valdyerresweb-preprod/valdyerresweb3k/;
         }
         location /static
         {
-                root /home/web/www/valdyerresweb-preprod/valdyerresweb;
+                root /home/web/www/valdyerresweb-preprod/valdyerresweb3k;
         }
 
         location /

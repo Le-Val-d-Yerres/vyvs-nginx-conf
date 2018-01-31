@@ -55,11 +55,11 @@ server
 
         location /media
         {
-                root /home/web/www/valdyerresweb-prod/valdyerresweb/;
+                root /home/web/www/valdyerresweb-prod/valdyerresweb3k/;
         }
         location /static
         {
-                root /home/web/www/valdyerresweb-prod/valdyerresweb;
+                root /home/web/www/valdyerresweb-prod/valdyerresweb3k;
         }
 
         location /
